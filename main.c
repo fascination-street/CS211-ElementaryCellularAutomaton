@@ -65,7 +65,7 @@ int stateToIndex(bool state[3]) {
 //current status of active for the nearby [left,me,right] cells
 //note: world is assumed periodic/cyclic,
 //with front-to-back and back-to-front wrapping 
-void setStates(cell world[WORLD_SIZE]) {
+void setStates(cell world[65]) {
 
     //TODO: Task 5 - write the setStates() function
     for (int i = 1; i <= WORLD_SIZE; i++)
@@ -108,7 +108,7 @@ void setStates(cell world[WORLD_SIZE]) {
 //  using its state array
 //ruleBitArray contains the 8-bits for the rule#, 
 //  stored in reverse order
-void evolveWorld(cell world[WORLD_SIZE], bool ruleBitArray[8]) {
+void evolveWorld(cell world[65], bool ruleBitArray[8]) {
 
     //TODO: Task 7 - write the evolveWorld() function
     int stateIndex;
@@ -153,7 +153,7 @@ void printEvoSteps(bool bitArray[])
 }
 
 int main() {
-    cell world[WORLD_SIZE];
+    cell world[65];
 
     printf("Welcome to the Elementary Cellular Automaton!\n");
 
